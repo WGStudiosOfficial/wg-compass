@@ -1,14 +1,16 @@
 <div align="center">
 
-# virtue-compass
+# wg-compass
 
 **A lightweight, fully configurable compass HUD for FiveM.**
 
 Heading • street / zone / postal • waypoint bearing & distance • in-game settings • zero dependencies
 
+**Available for free at [wgstudios.shop](https://wgstudios.shop/)**
+
 <br>
 
-<img src="docs/preview.webp" alt="virtue-compass — compass HUD and in-game settings menu" width="720">
+<img src="docs/preview.webp" alt="wg-compass — compass HUD and in-game settings menu" width="720">
 
 </div>
 
@@ -31,12 +33,12 @@ Heading • street / zone / postal • waypoint bearing & distance • in-game s
 
 ## Installation
 
-1. Drop the `virtue-compass` folder into your `resources` directory.
+1. Drop the `wg-compass` folder into your `resources` directory.
 2. Add to your `server.cfg`:
    ```cfg
-   ensure virtue-compass
+   ensure wg-compass
    ```
-3. Start the server (or `ensure virtue-compass` from the console).
+3. Start the server (or `ensure wg-compass` from the console).
 
 No database and no other resources are required.
 
@@ -91,16 +93,16 @@ Control the compass from another resource without touching the player's saved ch
 
 ```lua
 -- exports
-exports['virtue-compass']:SetVisible(false)  -- temporary hide (cutscene, no-HUD zone)
-exports['virtue-compass']:SetVisible(true)   -- show again
-exports['virtue-compass']:Enable()           -- turn on  (persists)
-exports['virtue-compass']:Disable()          -- turn off (persists)
-exports['virtue-compass']:Toggle()
-local isOn = exports['virtue-compass']:IsEnabled()
+exports['wg-compass']:SetVisible(false)  -- temporary hide (cutscene, no-HUD zone)
+exports['wg-compass']:SetVisible(true)   -- show again
+exports['wg-compass']:Enable()           -- turn on  (persists)
+exports['wg-compass']:Disable()          -- turn off (persists)
+exports['wg-compass']:Toggle()
+local isOn = exports['wg-compass']:IsEnabled()
 
 -- events (also work from the server via TriggerClientEvent)
-TriggerEvent('virtue-compass:setVisible', false)
-TriggerEvent('virtue-compass:toggle')
+TriggerEvent('wg-compass:setVisible', false)
+TriggerEvent('wg-compass:toggle')
 ```
 
 ## Performance
@@ -115,4 +117,4 @@ Built to stay out of your server's resmon:
 
 ## License
 
-Released under the [MIT License](LICENSE) © Virtue.
+Released under the [MIT License](LICENSE) © WG.
